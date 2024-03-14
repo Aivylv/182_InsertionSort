@@ -25,18 +25,6 @@ void input() { //procedure utk input
 	}
 }
 
-void display() { //procedure utk menampilkan hasil
-	cout << endl; // output baris kosong
-	cout << "====================" << endl; //output ke layar
-	cout << "Elemen Array yang telah tersusun" << endl; //output ke layar
-	cout << "====================" << endl; //output ke layar
-	for (int j = 0; j < n; j++) {  //looping dgn j dimulai dari 0 hingga n-1
-		cout << "Data Ke- " << j + 1 << ": ";
-		cout << arr[j] << endl; //output ke layar
-	}
-	cout << endl; //output baris kosong
-}
-
 void insertionSort() {	//Procedure InsertionSort
 
 	int temp;			//Membuat variabel data temporer atau penyimpanan sementara
@@ -57,7 +45,7 @@ void insertionSort() {	//Procedure InsertionSort
 		arr[j + 1] = temp;					//5. simpan nilai temp ke dalam arr[j+1]
 
 
-		cout << "\nPass" << i << ": ";		//Output ke layar
+		cout << "\nPass " << i << ": ";		//Output ke layar
 		for (int k = 0; k < n; k++)			//Looping nilai k dimulai dari 0 hingga n-1
 		{
 			cout << arr[k] << " ";			//Output ke layar
@@ -79,5 +67,7 @@ void display() {										//procedure utk menampilkan hasil
 
 int main()
 {
-    
+	input();			//memnaggil input
+	insertionSort();	//memanggil insert sort
+	display();			//memanggil display
 }
